@@ -1,7 +1,6 @@
 package Sabra_Talkies.controllers;
 
 import Sabra_Talkies.models.*;
-import Sabra_Talkies.payload.request.CommentRequest;
 import Sabra_Talkies.payload.request.SignupRequest;
 import Sabra_Talkies.payload.response.MessageResponse;
 import Sabra_Talkies.repository.CommentRepository;
