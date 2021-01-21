@@ -1,7 +1,6 @@
 package Sabra_Talkies.controllers;
 
 import Sabra_Talkies.models.*;
-import Sabra_Talkies.payload.request.SignupRequest;
 import Sabra_Talkies.payload.response.MessageResponse;
 import Sabra_Talkies.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -37,7 +34,5 @@ public class CommentController {
     public List<CommentDB> getAllComments(){
         return commentRepository.findAll();
     }
-
-
 
 }

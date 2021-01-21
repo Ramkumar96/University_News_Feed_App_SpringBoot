@@ -1,8 +1,5 @@
 package Sabra_Talkies.payload.response;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 public class JwtResponse {
@@ -17,8 +14,8 @@ public class JwtResponse {
 	private String username;
 	private String email;
 	private String academicYear;
-	private String facultyId ;
-	private String departmentId;
+	private String facultyName ;
+	private String departmentName;
 	private Boolean acceptedByAdmin;
 	private Boolean rejectedByAdmin;
 	private List<String> roles;
@@ -26,7 +23,7 @@ public class JwtResponse {
 	public JwtResponse(String accessToken,Long id, String firstname,
 					   String lastname, String gender, String birthOfDate,
 					   String district, String username, String email, String academicYear,
-					   String facultyId, String departmentId, Boolean acceptedByAdmin,
+					   String facultyName, String departmentName, Boolean acceptedByAdmin,
 					   Boolean rejectedByAdmin, List<String> roles) {
 		this.token = accessToken;
 		this.type = type;
@@ -39,8 +36,8 @@ public class JwtResponse {
 		this.username = username;
 		this.email = email;
 		this.academicYear = academicYear;
-		this.facultyId = facultyId;
-		this.departmentId = departmentId;
+		this.facultyName = facultyName;
+		this.departmentName = departmentName;
 		this.acceptedByAdmin = acceptedByAdmin;
 		this.rejectedByAdmin = rejectedByAdmin;
 		this.roles = roles;
@@ -102,13 +99,21 @@ public class JwtResponse {
 
 	public void setAcademicYear(String academicYear) { this.academicYear = academicYear; }
 
-	public String getFacultyId() { return facultyId; }
+	public String getFacultyName() {
+		return facultyName;
+	}
 
-	public void setFacultyId(String facultyId) { this.facultyId = facultyId; }
+	public void setFacultyName(String facultyName) {
+		this.facultyName = facultyName;
+	}
 
-	public String getDepartmentId() { return departmentId; }
+	public String getDepartmentName() {
+		return departmentName;
+	}
 
-	public void setDepartmentId(String departmentId) { this.departmentId = departmentId; }
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
+	}
 
 	public Boolean getAcceptedByAdmin() { return acceptedByAdmin; }
 

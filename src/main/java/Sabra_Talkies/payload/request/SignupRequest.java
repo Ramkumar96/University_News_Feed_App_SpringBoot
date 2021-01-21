@@ -30,9 +30,9 @@ public class SignupRequest {
 
     private String academicYear;
 
-    private String facultyId ;
+    private String facultyName ;
 
-    private String departmentId;
+    private String departmentName;
 
     private Boolean acceptedByAdmin;
 
@@ -91,13 +91,21 @@ public class SignupRequest {
 
     public void setAcademicYear(String academicYear) { this.academicYear = academicYear; }
 
-    public String getFacultyId() { return facultyId; }
+    public String getFacultyName() {
+        return facultyName;
+    }
 
-    public void setFacultyId(String facultyId) { this.facultyId = facultyId; }
+    public void setFacultyName(String facultyName) {
+        this.facultyName = facultyName;
+    }
 
-    public String getDepartmentId() { return departmentId; }
+    public String getDepartmentName() {
+        return departmentName;
+    }
 
-    public void setDepartmentId(String departmentId) { this.departmentId = departmentId; }
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
 
     public Boolean getAcceptedByAdmin() { return acceptedByAdmin; }
 

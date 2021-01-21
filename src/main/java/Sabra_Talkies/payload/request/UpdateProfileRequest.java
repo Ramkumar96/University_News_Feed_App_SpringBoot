@@ -2,7 +2,6 @@ package Sabra_Talkies.payload.request;
 
 import javax.validation.constraints.NotBlank;
 
-
 public class UpdateProfileRequest {
 
     private String firstname;
@@ -22,9 +21,9 @@ public class UpdateProfileRequest {
 
     private String academicYear;
 
-    private String facultyId ;
+    private String facultyName ;
 
-    private String departmentId;
+    private String departmentName;
 
     public String getFirstname() {
         return firstname;
@@ -90,19 +89,19 @@ public class UpdateProfileRequest {
         this.academicYear = academicYear;
     }
 
-    public String getFacultyId() {
-        return facultyId;
+    public String getFacultyName() {
+        return facultyName;
     }
 
-    public void setFacultyId(String facultyId) {
-        this.facultyId = facultyId;
+    public void setFacultyName(String facultyName) {
+        this.facultyName = facultyName;
     }
 
-    public String getDepartmentId() {
-        return departmentId;
+    public String getDepartmentName() {
+        return departmentName;
     }
 
-    public void setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
     }
 }

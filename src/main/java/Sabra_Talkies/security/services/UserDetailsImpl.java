@@ -41,9 +41,9 @@ public class UserDetailsImpl implements UserDetails {
 
 	private String academicYear;
 
-	private String facultyId ;
+	private String facultyName;
 
-	private String departmentId;
+	private String departmentName;
 
 	private Boolean acceptedByAdmin;
 
@@ -55,8 +55,8 @@ public class UserDetailsImpl implements UserDetails {
 
 	public UserDetailsImpl(Long id, String firstname, String lastname, String gender,
 						   String birthOfDate, String district, String username, String email,
-						   String password, String academicYear, String facultyId,
-						   String departmentId, Boolean acceptedByAdmin, Boolean rejectedByAdmin,
+						   String password, String academicYear, String facultyName,
+						   String departmentName, Boolean acceptedByAdmin, Boolean rejectedByAdmin,
 						   String resetPasswordToken, Collection<? extends GrantedAuthority> authorities) {
 		this.id = id;
 		this.firstname = firstname;
@@ -68,8 +68,8 @@ public class UserDetailsImpl implements UserDetails {
 		this.email = email;
 		this.password = password;
 		this.academicYear = academicYear;
-		this.facultyId = facultyId;
-		this.departmentId = departmentId;
+		this.facultyName = facultyName;
+		this.departmentName = departmentName;
 		this.acceptedByAdmin = acceptedByAdmin;
 		this.rejectedByAdmin = rejectedByAdmin;
 		this.resetPasswordToken = resetPasswordToken;
@@ -92,8 +92,8 @@ public class UserDetailsImpl implements UserDetails {
 				user.getEmail(),
 				user.getPassword(),
 				user.getAcademicYear(),
-				user.getFacultyId(),
-				user.getDepartmentId(),
+				user.getFacultyName(),
+				user.getDepartmentName(),
 				user.getAcceptedByAdmin(),
 				user.getRejectedByAdmin(),
 				user.getResetPasswordToken(),
@@ -127,9 +127,13 @@ public class UserDetailsImpl implements UserDetails {
 
 	public String getAcademicYear() { return academicYear; }
 
-	public String getFacultyId() { return facultyId; }
+	public String getFacultyName() {
+		return facultyName;
+	}
 
-	public String getDepartmentId() { return departmentId; }
+	public String getDepartmentName() {
+		return departmentName;
+	}
 
 	public Boolean getAcceptedByAdmin() { return acceptedByAdmin; }
 

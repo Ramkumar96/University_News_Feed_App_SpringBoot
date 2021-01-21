@@ -85,8 +85,8 @@ public class AuthController {
 												 userDetails.getUsername(), 
 												 userDetails.getEmail(),
 												 userDetails.getAcademicYear(),
-												 userDetails.getFacultyId(),
-												 userDetails.getDepartmentId(),
+												 userDetails.getFacultyName(),
+												 userDetails.getDepartmentName(),
 												 userDetails.getAcceptedByAdmin(),
 												 userDetails.getRejectedByAdmin(),
 												 roles));
@@ -117,8 +117,8 @@ public class AuthController {
 				signUpRequest.getEmail(),
 				encoder.encode(signUpRequest.getPassword()),
 				signUpRequest.getAcademicYear(),
-				signUpRequest.getFacultyId(),
-				signUpRequest.getDepartmentId(),
+				signUpRequest.getFacultyName(),
+				signUpRequest.getDepartmentName(),
 				signUpRequest.getAcceptedByAdmin(),
 				signUpRequest.getRejectedByAdmin(),
 				signUpRequest.getResetPasswordToken());
@@ -143,10 +143,8 @@ public class AuthController {
 				}
 			});
 
-
 		user.setRoles(roles);
 		userRepository.save(user);
-
 		return ResponseEntity.ok(new MessageResponse("User Added successfully!"));
 	}
 
@@ -156,7 +154,7 @@ public class AuthController {
 	}
 
 
-	@PutMapping("/register")
+	@PutMapping("/updateprofile")
 	ResponseEntity<?> UpdateUserProfile(@Valid @RequestBody UpdateProfileRequest updateProfileRequest){
 
 		User existingUser = userRepository.findByEmail(updateProfileRequest.getEmail());
@@ -169,8 +167,8 @@ public class AuthController {
 		existingUser.setEmail(updateProfileRequest.getEmail());
 		existingUser.setPassword(encoder.encode(updateProfileRequest.getPassword()));
 		existingUser.setAcademicYear(updateProfileRequest.getAcademicYear());
-		existingUser.setFacultyId(updateProfileRequest.getFacultyId());
-		existingUser.setDepartmentId(updateProfileRequest.getDepartmentId());
+		existingUser.setFacultyName(updateProfileRequest.getFacultyName());
+		existingUser.setDepartmentName(updateProfileRequest.getDepartmentName());
 
 		User result = userRepository.save(existingUser);
 

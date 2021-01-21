@@ -42,9 +42,9 @@ public class User {
 
 	private String academicYear;
 
-	private String facultyId ;
+	private String facultyName ;
 
-	private String departmentId;
+	private String departmentName;
 
 	private Boolean acceptedByAdmin;
 
@@ -58,14 +58,12 @@ public class User {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
 
-
 	public User() {
 	}
 
-
 	public User(String firstname, String lastname, String gender, String birthOfDate,
 				String district,String username,String email,String password, String academicYear,
-				String facultyId, String departmentId, Boolean acceptedByAdmin,
+				String facultyName, String departmentName, Boolean acceptedByAdmin,
 				Boolean rejectedByAdmin, String resetPasswordToken) {
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -76,8 +74,8 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.academicYear = academicYear;
-		this.facultyId = facultyId;
-		this.departmentId = departmentId;
+		this.facultyName = facultyName;
+		this.departmentName = departmentName;
 		this.acceptedByAdmin = acceptedByAdmin;
 		this.rejectedByAdmin = rejectedByAdmin;
 		this.resetPasswordToken = resetPasswordToken;
@@ -163,20 +161,20 @@ public class User {
 		this.academicYear = academicYear;
 	}
 
-	public String getFacultyId() {
-		return facultyId;
+	public String getFacultyName() {
+		return facultyName;
 	}
 
-	public void setFacultyId(String facultyId) {
-		this.facultyId = facultyId;
+	public void setFacultyName(String facultyName) {
+		this.facultyName = facultyName;
 	}
 
-	public String getDepartmentId() {
-		return departmentId;
+	public String getDepartmentName() {
+		return departmentName;
 	}
 
-	public void setDepartmentId(String departmentId) {
-		this.departmentId = departmentId;
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 
 	public Boolean getAcceptedByAdmin() {

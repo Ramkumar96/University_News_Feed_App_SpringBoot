@@ -8,16 +8,12 @@ import javax.persistence.Table;
 @Table(	name = "department")
 public class Department {
 
-
     @Id
     private String departmentId;
 
     private String facultyId;
 
     private String departmentName;
-
-
-
 
     public Department() {
     }
