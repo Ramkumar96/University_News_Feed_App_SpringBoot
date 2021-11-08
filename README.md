@@ -1,4 +1,5 @@
 University Newsfeed Management - Web application
+Backend :Spring Boot | Spring Security | MySQL
 
 Mini web app to manage newsfeeds of a university in which students can upload and view the posts related to university activities.
 
