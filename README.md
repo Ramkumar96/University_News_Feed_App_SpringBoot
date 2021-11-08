@@ -2,7 +2,7 @@ University Newsfeed Management - Web application
 
 Mini web app to manage newsfeeds of a university in which students can upload and view the posts related to university activities.
 
-Technologies: HTML | CSS | Bootstrap | React JS | Spring Boot | MySQL
+Technologies: HTML | CSS | Bootstrap | React JS | Spring Boot | Spring Security | MySQL
 
 Students can 
 register and login
